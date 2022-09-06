@@ -1,0 +1,421 @@
+:root {
+  --vertical-inset: 3rem;
+  --horizontal-inset: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #73282f;
+}
+
+/* Side Menu */
+
+.section-hero {
+  display: flex;
+  min-height: 100vh;
+}
+
+.side-menu {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 32rem;
+  padding: 3rem 4rem;
+}
+
+.nm-logo {
+  height: 4rem;
+}
+
+.nm-logo > img {
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: white;
+  margin: 0;
+}
+
+.subtitle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtitle-caption {
+  font-size: 1.375rem;
+  line-height: 1;
+  color: white;
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.button-accent {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #73282f;
+  background-color: white;
+  border-radius: 100rem;
+}
+
+.button-secondary-big {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: white;
+  background-color: #571f24;
+  border-radius: 100rem;
+}
+
+.button-download {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button-secondary-small {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: white;
+  background-color: #571f24;
+  border-radius: 100rem;
+}
+
+.button-download-caption {
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+}
+
+.location-mark-text {
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+}
+
+.location-mark {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.disclaimer {
+  display: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Render */
+.render-container {
+  position: relative;
+  width: 100%;
+}
+
+.render-image {
+  position: absolute;
+  inset: 0;
+
+  background-image: url(/img/main.jpg);
+  background-size: cover;
+  background-position: bottom right;
+}
+
+.render-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.render-header {
+  position: absolute;
+  left: var(--horizontal-inset);
+  right: var(--horizontal-inset);
+  top: var(--vertical-inset);
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.render-nm-logo {
+  display: none;
+  height: 2.5rem;
+}
+
+.render-nm-logo > img {
+  height: 100%;
+}
+
+.render-location-mark {
+  display: none;
+  position: absolute;
+  bottom: var(--vertical-inset);
+  left: var(--horizontal-inset);
+}
+
+.bering-logo {
+  position: absolute;
+  left: var(--horizontal-inset);
+  top: var(--vertical-inset);
+  height: 9rem;
+}
+
+.bering-logo > img {
+  height: 100%;
+}
+
+.phone-number {
+  flex: none;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  margin-left: 2rem;
+  padding: 0.5rem 1.5rem;
+  width: max-content;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(25px);
+  border-radius: 100rem;
+}
+
+.render-disclaimer {
+  position: absolute;
+  left: var(--horizontal-inset);
+  bottom: var(--vertical-inset);
+  margin-right: 2rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Адаптивы */
+
+@media (max-width: 1200px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 912px) {
+  :root {
+    --vertical-inset: 1.5rem;
+    --horizontal-inset: 2rem;
+  }
+
+  .section-hero {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .render-container {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .phone-number {
+    font-size: 1rem;
+  }
+
+  .nm-logo {
+    display: none;
+  }
+
+  .render-nm-logo {
+    display: inline;
+    height: 2rem;
+  }
+
+  .render-image-container {
+    position: static;
+    min-height: 20rem;
+  }
+
+  .render-image {
+    top: 5rem;
+  }
+
+  .bering-logo {
+    left: var(--horizontal-inset);
+    top: 6.5rem;
+    height: 4.5rem;
+  }
+
+  .render-disclaimer {
+    display: none;
+  }
+
+  .side-menu {
+    justify-content: flex-start;
+    max-width: unset;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .title-container {
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle-caption {
+    font-size: 1.125rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .location-mark {
+    display: none;
+  }
+
+  .render-location-mark {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .disclaimer {
+    display: inline;
+  }
+
+  .button-container {
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .button-accent,
+  .button-secondary-big,
+  .button-secondary-small,
+  .button-download-caption {
+    font-size: 1rem;
+  }
+
+  .button-download-caption {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --vertical-inset: 1rem;
+    --horizontal-inset: 1rem;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  .render-image-container {
+    min-height: 9rem;
+  }
+
+  .render-image {
+    top: 4rem;
+  }
+
+  .render-nm-logo {
+    height: 1.75rem;
+  }
+
+  .phone-number {
+    margin-left: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle-caption {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .side-menu {
+    padding: 1rem;
+  }
+
+  .bering-logo {
+    top: 5rem;
+  }
+}
+
+/* Костыли */
+
+@media (max-height: 800px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 720px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 640px) {
+  * {
+    font-size: 10px;
+  }
+}
