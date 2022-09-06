@@ -238,7 +238,7 @@ body {
   left: var(--horizontal-inset);
   bottom: var(--vertical-inset);
   margin-right: 2rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: white;
 }
@@ -401,8 +401,6 @@ body {
   }
 }
 
-/* Костыли */
-
 @media (max-height: 800px) {
   * {
     font-size: 14px;
@@ -415,7 +413,7 @@ body {
   }
 }
 
-@media (max-height: 640px) {
+@media (min-width: 912px), (max-height: 640px) {
   * {
     font-size: 10px;
   }
