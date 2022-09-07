@@ -169,7 +169,7 @@ body {
 
   background-image: url(/img/main.jpg);
   background-size: cover;
-  background-position: bottom right;
+  background-position: bottom center;
 }
 
 .render-image-container {
